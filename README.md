@@ -18,15 +18,15 @@ Building
 --------
 There are three different solution files, depending on the platform:
 
-defense-xna.sln - This is the XNA 4.0 version which works with Visual
+**defense-xna.sln** - This is the XNA 4.0 version which works with Visual
                   Studio 2010 only, and you have to have XNA installed.
 
-defense-mono.sln - This is the MonoGame PC version. It will run on either
+**defense-mono.sln** - This is the MonoGame PC version. It will run on either
                    Visual Studio 2010 or 2012, and requires MonoGame
                    (tested with 3.0.1). It may also work in the
                    MonoDevelop IDE.
 
-defense-mac.sln - This is for MonoGame on Mac. It requires the free
+**defense-mac.sln** - This is for MonoGame on Mac. It requires the free
                   version of Xamarin Studio as well as MonoGame.
 
 Almost all of the C# files are simply shared between the three projects.
