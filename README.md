@@ -11,8 +11,8 @@ analysis of the code, you should read the corresponding chapter from
 the book (14).
 
 For any updates to this code, more detailed build instructions,
-as well as download links to binaries, visit the book's website at
-http://gamealgorithms.net/.
+as well as download links to binaries, visit the page for this project
+on the book's website at: http://gamealgorithms.net/source-code/defense/.
 
 Building
 --------
