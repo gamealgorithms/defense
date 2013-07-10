@@ -1,7 +1,6 @@
 __Defense Sample Game
 =====================
-Game Progamming Algorithms and Techniques
-
+Game Progamming Algorithms and Techniques  
 By: Sanjay Madhav
 
 Information
