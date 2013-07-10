@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locdata>
+<!-- Note, don't put comments within text keys... they will get parsed! -->
+<!-- Main Menu -->
+<text id='ui_title'>__Defense</text>
+<text id='ui_new_game'>Start!!</text>
+<text id='ui_tutorial'>How to Play</text>
+<text id='ui_options'>Options</text>
+<text id='ui_shutdown'>Shutdown</text>
+
+<!-- How to Play -->
+<text id='ui_how_title'>How to Play</text>
+<text id='ui_how_back'>Back to Menu</text>
+<text id='ui_how_instructions'><font face='Instructions' color='#ffffff'>Enemies are attacking your <font color='#00ff00'>base</font>!<br/><br/>Click on <font color='#1400ca'>blue</font> tiles and use the grid menu to build/upgrade towers. Killing enemies gives you more money.<br/><br/><font color='#ff7e00'>Projectile</font> towers shoot at enemies and <font color='#00ffea'>slow</font> towers ensnare them.<br/><br/>Enemies will reroute to the shortest path, which is shown in white -- fully blocking is not allowed.<br/><br/>If you become overwhelmed, use the space bar to pause and plan.<br/><br/>If you survive all the waves, you will be victorious!!</font></text>
+
+<!-- Pause Menu -->
+<text id='ui_paused'>Paused</text>
+<text id='ui_resume'>Resume</text>
+<text id='ui_quit'>Quit</text>
+
+<!-- Game Over Menu -->
+<text id='ui_victory'>You Win!</text>
+<text id='ui_defeat'>You Lose!</text>
+
+<!-- Gameplay UI -->
+<text id='ui_money'>Money: $</text>
+<text id='ui_life'>Life:  </text>
+<text id='ui_wave'>Wave:  </text>
+<text id='ui_wavetime'>Next Wave In: </text>
+<text id='ui_waveactive'>Wave Active</text>
+<text id='ui_build'>Build</text>
+
+<text id='ui_tile'>Tile: </text>
+<text id='ui_building'>Building: </text>
+<text id='ui_none'>None</text>
+<text id='ui_status'>Status: </text>
+<text id='ui_active'>Active</text>
+<text id='ui_disabled'>Disabled</text>
+<text id='ui_beingbuilt'>Building ({0}%)</text>
+<text id='ui_enemystr'>Enemy Spawn</text>
+
+<text id='ui_speed'>Speed: </text>
+<text id='ui_slow'>Slow</text>
+<text id='ui_normal'>Normal</text>
+<text id='ui_fast'>Fast</text>
+<text id='ui_fastest'>Fastest</text>
+
+<!-- Status Messages -->
+<text id='ui_msg_waveover'>WAVE COMPLETE!</text>
+<text id='ui_msg_enemiesstronger'>THE ENEMIES GROW STRONGERRRR</text>
+<text id='ui_msg_base'>YOUR BASE IS UNDER ATTACK!</text>
+<text id='ui_msg_boss'>BOSS INCOMING, YOU ARE NOT PREPARED!</text>
+
+<!-- Error Messages -->
+<text id='ui_err_money'>You don't have enough money.</text>
+<text id='ui_err_block'>You can't fully block the path.</text>
+<text id='ui_err_building'>Can't upgrade while building.</text>
+<text id='ui_err_level'>Tower already at max level.</text>
+
+<!-- Tooltips -->
+<text id='tip_speed'>Current game speed.<br/><br/>Press <font color='#00ff00'>{0}</font> to decrease and <font color='#00ff00'>{1}</font> to increase.<br/><br/><font color='#00ff00'>{2}</font> starts and stops.</text>
+<text id='tip_money'>How much money you have.<br/><br/><font color='#c5b358'>The Hyperdeflation Act of 2137 forced the Fed to issue the New Dollar. $1 now is equivalent to $10,000 in 2013.</font></text>
+<text id='tip_life'>Your life total.<br/><br/><font color='#c5b358'>If this hits zero, you lose the game.</font></text>
+<text id='tip_wave'>There are a total of {0} waves.<br/><br/><font color='#c5b358'>Complete them all and win!</font></text>
+<text id='tip_wavetime'>Amount of time until next wave.</text>
+
+<!-- Build grid -->
+<text id='tip_projectiletower'>Projectile Tower - <font color='#00ff00'>{0}</font><br/>Cost: {1}<br/>Build Time: {2}s<br/><br/><font color='#c5b358'>Shoots a seeking projectile at enemies.</font></text>
+<text id='tip_slowtower'>Slow Tower - <font color='#00ff00'>{0}</font><br/>Cost: {1}<br/>Build Time: {2}s<br/><br/><font color='#c5b358'>Slows enemies nearby for a short time.</font></text>
+
+<!-- Upgrade grid -->
+<text id='tip_upgrade'>Upgrade {0} - <font color='#00ff00'>{1}</font><br/>Level: {2}<br/>Upgrade Cost: {3}<br/>Upgrade Time: {4}s<br/><br/><font color='#c5b358'>{5}</font></text>
+<text id='level_separator'>/</text>
+<text id='max_level'>Max Level</text>
+<text id='n_a'>N/A</text>
+<text id='upgrade_projectile'>Upgrading this increases the amount of damage done per projectile.</text>
+<text id='upgrade_slow'>Upgrading this causes nearby enemies to move even more slowly.</text>
+<text id='tip_delete'>Delete - <font color='#00ff00'>{0}</font><br/><br/><font color='#c5b358'>Destroy this tower and receive a partial refund of ${1}.</font></text>
+<text id='tip_cancel'>Cancel - <font color='#00ff00'>{0}</font></text>
+
+<!-- Tiles -->
+<text id='tile_green'>100% Light</text>
+<text id='tile_default'>50/50 Light/Dark</text>
+<text id='tile_red'>100% Dark</text>
+
+<!-- Tower Names -->
+<text id='build_base'>Main Base</text>
+<text id='build_projectiletower'>Projectile Tower</text>
+<text id='build_slowtower'>Slow Tower</text>
+
+<!-- Months -->
+<text id='ui_month_1'>Jan. </text>
+<text id='ui_month_2'>Feb. </text>
+<text id='ui_month_3'>Mar. </text>
+<text id='ui_month_4'>Apr. </text>
+<text id='ui_month_5'>May  </text>
+<text id='ui_month_6'>Jun. </text>
+<text id='ui_month_7'>Jul. </text>
+<text id='ui_month_8'>Aug. </text>
+<text id='ui_month_9'>Sep. </text>
+<text id='ui_month_10'>Oct. </text>
+<text id='ui_month_11'>Nov. </text>
+<text id='ui_month_12'>Dec. </text>
+</locdata>
