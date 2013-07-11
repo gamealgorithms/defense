@@ -34,3 +34,15 @@ The only separate files are the Program*.cs files, which are just really
 simple entry point files. Also note that the Bloom post-process effect is
 only enabled in the XNA version, as there are some differences in how
 MonoGame handles effects.
+
+License
+-------
+The code is released under the Microsoft Permissilve License, which more
+or less means you can use it for whatever you want to, commerical or not.
+
+Though not required, it would be nice if you gave attribution if you end
+up using this code in a game of yours. At the very least, I'd love to
+hear about any games that end up doing so.
+
+I'm not a lawyer, though, so you'll want to read the full LICENSE file.
+
