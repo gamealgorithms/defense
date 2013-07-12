@@ -559,7 +559,7 @@ namespace defense
 
 				// Destroy the tower
 				RemoveGameObject(m_SelectedTile.Tower);
-				m_SelectedTile.ClearTower();
+				m_SelectedTile.ClearTower(true);
 
 				// Notify the UI the tile state has changed
 				m_UIGameplay.NewSelectedTile(m_SelectedTile);

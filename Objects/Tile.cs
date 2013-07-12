@@ -17,6 +17,14 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace defense.Objects
 {
+	// Track whether the tile is stationary or moving up/down
+	public enum eTileState
+	{
+		Default,
+		Up,
+		Down
+	}
+
 	public class Tile : GameObject
 	{
 		protected Texture2D m_Texture;
@@ -56,12 +64,6 @@ namespace defense.Objects
 			get { return m_Tower; }
 		}
 
-		public void ClearTower()
-		{
-			m_Tower = null;
-			m_bBuildable = true;
-		}
-
 		protected eTileType m_Type = eTileType.Default;
 		public eTileType Type
 		{
@@ -70,6 +72,10 @@ namespace defense.Objects
 
 		// Links to other tiles (for nav graph)
 		public LinkedList<Tile> m_Neighbors = new LinkedList<Tile>();
+
+		// For tile movement
+		protected eTileState m_State = eTileState.Default;
+		protected float m_fYOffset = 0.0f;
 
 		public Tile(Game game):
 			base(game)
@@ -90,6 +96,20 @@ namespace defense.Objects
 
 		public override void Update(float fDeltaTime)
 		{
+			// Before base update since we're altering position
+			if (m_State == eTileState.Up && m_fYOffset < GlobalDefines.fMaxTileYOffset)
+			{
+				float fChange = fDeltaTime * GlobalDefines.fTileSpeed;
+				m_fYOffset += fChange;
+				IncrementY(fChange);
+			}
+			else if (m_State == eTileState.Down && m_fYOffset > 0.0f)
+			{
+				float fChange = -(fDeltaTime * GlobalDefines.fTileSpeed);
+				m_fYOffset += fChange;
+				IncrementY(fChange);
+			}
+
 			base.Update(fDeltaTime);
 
 			// Update my building
@@ -155,6 +175,20 @@ namespace defense.Objects
 
 			m_bInUse = true;
 			m_bBuildable = false;
+
+			// When we build, move the tile up
+			m_State = eTileState.Up;
+		}
+
+		public void ClearTower(bool destroying = false)
+		{
+			m_Tower = null;
+			m_bBuildable = true;
+			// If the tower is being destroyed, move the tile back down
+			if (destroying)
+			{
+				m_State = eTileState.Down;
+			}
 		}
 	}
 }

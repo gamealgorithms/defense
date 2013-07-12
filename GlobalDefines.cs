@@ -42,7 +42,7 @@ namespace defense
 		public static float fBloomSaturation = 2;
 		public static float fBaseSaturation = 1;
 
-		public static float fTileSpeed = 1.0f;
+		public static float fTileSpeed = 0.5f;
 		public static float fMaxTileYOffset = 0.15f;
 		public static float fTileHeight = 0.15f;
 
