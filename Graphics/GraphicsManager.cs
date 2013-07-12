@@ -241,7 +241,7 @@ namespace defense
 
 			// First draw all 3D components
 			m_Game.GraphicsDevice.RasterizerState = RasterizerState.CullNone;
-			// For background objects, disabled ZBuffer
+			// For background objects, disabled Z-Buffer
 			m_Game.GraphicsDevice.DepthStencilState = DepthStencilState.None;
 			foreach (GameObject o in m_BGObjects)
 			{
@@ -254,6 +254,8 @@ namespace defense
 				o.Draw(fDeltaTime);
 			}
 
+			// Also disabled Z-Buffer for background objects
+			m_Game.GraphicsDevice.DepthStencilState = DepthStencilState.None;
 			foreach (GameObject o in m_FGObjects)
 			{
 				o.Draw(fDeltaTime);
