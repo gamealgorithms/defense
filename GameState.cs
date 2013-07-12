@@ -24,7 +24,6 @@ namespace defense
 		TitleScreen,
 		MainMenu,
 		Gameplay,
-		HowToPlay,
 	}
 
 	public enum eGameSpeed
@@ -174,11 +173,6 @@ namespace defense
 					break;
 				case eGameState.Gameplay:
 					SetupGameplay();
-					break;
-				case eGameState.HowToPlay:
-					// Going into How To Play Screen
-					m_UIStack.Clear();
-					m_UIStack.Push(new UI.UIHowToPlay(m_Game.Content));
 					break;
 			}
 
@@ -486,7 +480,7 @@ namespace defense
 			m_UIStack.Push(new UI.UIPauseMenu(m_Game.Content));
 		}
 
-		public void ShowPauseHowToPlay()
+		public void ShowHowToPlay()
 		{
 			m_UIStack.Push(new UI.UIHowToPlay(m_Game.Content));
 		}

@@ -55,15 +55,10 @@ namespace defense.UI
 
 		public override void Draw(float fDeltaTime, SpriteBatch DrawBatch)
 		{
-			// Draw background if in Pause Menu
-			if (GameState.Get().State != eGameState.HowToPlay)
-			{
-				// Draw background
-				GraphicsManager g = GraphicsManager.Get();
-				Rectangle rect = new Rectangle(0, 0,
-					g.Width, g.Height);
-				g.DrawFilled(DrawBatch, rect, Color.Black, 4.0f, Color.Black);
-			}
+			// Draw background
+			GraphicsManager g = GraphicsManager.Get();
+			Rectangle rect = new Rectangle(0, 0, g.Width, g.Height);
+			g.DrawFilled(DrawBatch, rect, Color.Black, 4.0f, Color.Black);
 
 			// Title
 			Vector2 vOffset = Vector2.Zero;
@@ -80,24 +75,12 @@ namespace defense.UI
 		public void Back()
 		{
 			SoundManager.Get().PlaySoundCue("MenuClick");
-			if (GameState.Get().State == eGameState.HowToPlay)
-			{
-				GameState.Get().SetState(eGameState.MainMenu);
-			}
-			else
-			{
-				GameState.Get().PopUI();
-			}
+			GameState.Get().PopUI();
 		}
 
 		public override void OnExit()
 		{
-			if (GameState.Get().State == eGameState.HowToPlay)
-			{
-				SoundManager.Get().PlaySoundCue("MenuClick");
-				GameState.Get().SetState(eGameState.MainMenu);
-			}
-
+			SoundManager.Get().PlaySoundCue("MenuClick");
 			base.OnExit();
 		}
 	}

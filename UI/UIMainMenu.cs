@@ -60,7 +60,7 @@ namespace defense.UI
 		public void Tutorial()
 		{
 			SoundManager.Get().PlaySoundCue("MenuClick");
-			GameState.Get().SetState(eGameState.HowToPlay);
+			GameState.Get().ShowHowToPlay();
 		}
 
 		public void Options()

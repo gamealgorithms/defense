@@ -68,7 +68,7 @@ namespace defense.UI
 
 		public void HowToPlay()
 		{
-			GameState.Get().ShowPauseHowToPlay();
+			GameState.Get().ShowHowToPlay();
 			SoundManager.Get().PlaySoundCue("MenuClick");
 		}
 
