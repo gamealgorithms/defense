@@ -108,7 +108,7 @@ namespace defense
 			// TODO: Set resolution to what's saved in the INI, or default fullscreen
 			if (!GlobalDefines.bFullScreen)
 			{
-				SetResolution(1440, 900);
+				SetResolution(GlobalDefines.WindowedWidth, GlobalDefines.WindowHeight);
 			}
 			else
 			{

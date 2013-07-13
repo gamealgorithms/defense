@@ -29,6 +29,10 @@ namespace defense
 
 		public static bool bVSync = false;
 		public static bool bFullScreen = true;
+		// Windowed resolution -- in full screen mode, it automatically
+		// selects the desktop resolution.
+		public static int WindowedWidth = 1440;
+		public static int WindowHeight = 900;
 
 		public static float fTitleFadeTime = 0.0f;
 
