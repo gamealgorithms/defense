@@ -15,7 +15,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace defense
+namespace itp380
 {
 	public class PhysicsManager : Patterns.Singleton<PhysicsManager>
 	{
@@ -104,11 +104,44 @@ namespace defense
 		{
 			BoundingSphere modelBounds = new BoundingSphere();
 			Model model = m_Game.Content.Load<Model>(modelName);
+			Matrix[] ModelBones = new Matrix[model.Bones.Count];
+			model.CopyAbsoluteBoneTransformsTo(ModelBones);
+
+			// Initialize initial radius
+			float radius = 0.0f;
+
+			// For each mesh of the model
 			foreach (ModelMesh mesh in model.Meshes)
 			{
-				modelBounds = BoundingSphere.CreateMerged(modelBounds, mesh.BoundingSphere);
+				foreach (ModelMeshPart meshPart in mesh.MeshParts)
+				{
+					// Vertex buffer parameters
+					int vertexStride = meshPart.VertexBuffer.VertexDeclaration.VertexStride;
+					int vertexBufferSize = meshPart.NumVertices * vertexStride;
+
+					// Get vertex data as float
+					float[] vertexData = new float[vertexBufferSize / sizeof(float)];
+					meshPart.VertexBuffer.GetData<float>(vertexData);
+
+					// Iterate through each vertex
+					for (int i = 0; i < vertexBufferSize / sizeof(float); i += vertexStride / sizeof(float))
+					{
+						// Transform this by any sub-mesh transform information
+						Vector3 transformedPosition =
+							Vector3.Transform(new Vector3(vertexData[i], vertexData[i + 1], vertexData[i + 2]),
+							ModelBones[mesh.ParentBone.Index]);
+
+						// Get the distance from center to this point, and see if it's a new radius
+						float dist = Vector3.Distance(Vector3.Zero, transformedPosition);
+						if (dist > radius)
+						{
+							radius = dist;
+						}
+					}
+				}
 			}
 
+			modelBounds.Radius = radius;
 			return modelBounds;
 		}
 	}
