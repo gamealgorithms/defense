@@ -27,7 +27,8 @@ namespace defense
 		public static float fCameraZoomSpeed = 0.0166f;
 		public static float fCameraAnimSpeed = 7.5f;
 
-		public static bool bVSync = false;
+		// cap the frame rate to the refresh rate
+		public static bool bVSync = true;
 		public static bool bFullScreen = true;
 		// Windowed resolution -- in full screen mode, it automatically
 		// selects the desktop resolution.
