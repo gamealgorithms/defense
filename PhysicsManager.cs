@@ -15,7 +15,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace itp380
+namespace defense
 {
 	public class PhysicsManager : Patterns.Singleton<PhysicsManager>
 	{
